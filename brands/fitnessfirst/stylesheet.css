@@ -2,6 +2,7 @@ body {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: right;
+  background-image: "https://praveen-static-assets.s3.amazonaws.com/rm-logo.jpeg"
 }
 
 .footer {
