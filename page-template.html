@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {%- auth0:head -%}
+    <title>{{ prompt.screen.texts.pageTitle }}</title>
+
+    <!-- default styling -->
+    <link rel="stylesheet" href="https://praveen-static-assets.s3.amazonaws.com/default.css">
+
+    <!-- brand specific styling  -->
+    {% if application.metadata.stylesheet_uri %}
+    <link rel="stylesheet" href="{{ application.metadata.stylesheet_uri }}">
+    {% endif %}
+</head>
+
+<body class="_widget-auto-layout">
+    {%- auth0:widget -%}
+
+    <footer class="footer">
+        <ul>
+            <!-- table of all universal login variables made available to the page template -->
+            <!-- as documented here: https://auth0.com/docs/customize/login-pages/universal-login/customize-templates#available-variables -->
+            <!-- current application information -->
+            <li>application.id: {{ application.id }}</li>
+            <li>application.name: {{ application.name }}</li>
+            <li>application.logo_url: {{ application.logo_url }}</li>
+            <li>application.metadata: {{ application.metadata }}</li>
+
+            <!-- branding information -->
+            <li>branding.logo_url: {{ branding.logo_url }}</li>
+            <li>branding.colors.primary: {{ branding.colors.primary }}</li>
+            <li>branding.colors.page_background: {{ branding.colors.page_background }}</li>
+
+            <!-- tenant information -->
+            <li>tenant.friendly_name: {{ tenant.friendly_name }}</li>
+            <li>tenant.support_email: {{ tenant.support_email }}</li>
+            <li>tenant.support_url: {{ tenant.support_url }}</li>
+            <li>tenant.enabled_locales: {{ tenant.enabled_locales }}</li>
+
+            <!-- current user information -->
+            <li>user.user_id: {{ user.user_id }}</li>
+            <li>user.picture: {{ user.picture }}</li>
+            <li>user.email: {{ user.email }}</li>
+            <li>user.email_verified: {{ user.email_verified }}</li>
+            <li>user.app_metadata: {{ user.app_metadata }}</li>
+            <li>user.user_metadata: {{ user.user_metadata }}</li>
+            <li>user.family_name: {{ user.family_name }}</li>
+            <li>user.given_name: {{ user.given_name }}</li>
+            <li>user.name: {{ user.name }}</li>
+            <li>user.nickname: {{ user.nickname }}</li>
+            <li>user.username: {{ user.username }}</li>
+
+            <!-- current screen information -->
+            <li>locale: {{ locale }}</li>
+            <li>prompt.name: {{ prompt.name }}</li>
+            <li>prompt.screen.name: {{ prompt.screen.name }}</li>
+            <li>prompt.screen.texts: {{ prompt.screen.texts }}</li>
+            <li>state: {{ state }}</li>
+        </ul>
+    </footer>
+</body>
+
+</html>
