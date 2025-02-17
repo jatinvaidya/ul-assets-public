@@ -5,8 +5,11 @@
     {%- auth0:head -%}
     <title>{{ prompt.screen.texts.pageTitle }}</title>
 
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- default styling -->
-    <link rel="stylesheet" href="https://praveen-static-assets.s3.amazonaws.com/default.css">
+    <link rel="stylesheet" href="https://ul-public-assets.s3.us-east-1.amazonaws.com/brands/default/stylesheet.css">
 
     <!-- brand specific styling  -->
     {% if application.metadata.stylesheet_uri %}
