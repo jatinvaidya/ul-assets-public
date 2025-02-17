@@ -19,33 +19,33 @@ function setAppBranding() {
 }
 
 function dumpContext() {
-	console.log("application.id: {{ application.id }}");
-	console.log("application.name: {{ application.name }}");
-	console.log("application.logo_url: {{ application.logo_url }}");
-	console.log("application.metadata: {{ application.metadata }}");
-	console.log("branding.logo_url: {{ branding.logo_url }}");
-	console.log("branding.colors.primary: {{ branding.colors.primary }}");
+	console.log("application.id: {{ application.id | json }}");
+	console.log("application.name: {{ application.name | json }}");
+	console.log("application.logo_url: {{ application.logo_url | json }}");
+	console.log("application.metadata: {{ application.metadata | json }}");
+	console.log("branding.logo_url: {{ branding.logo_url | json }}");
+	console.log("branding.colors.primary: {{ branding.colors.primary | json }}");
 	console.log(
-		"branding.colors.page_background: {{ branding.colors.page_background }}"
+		"branding.colors.page_background: {{ branding.colors.page_background | json }}"
 	);
-	console.log("tenant.friendly_name: {{ tenant.friendly_name }}");
-	console.log("tenant.support_email: {{ tenant.support_email }}");
-	console.log("tenant.support_url: {{ tenant.support_url }}");
-	console.log("tenant.enabled_locales: {{ tenant.enabled_locales }}");
-	console.log("user.user_id: {{ user.user_id }}");
-	console.log("user.picture: {{ user.picture }}");
-	console.log("user.email: {{ user.email }}");
-	console.log("user.email_verified: {{ user.email_verified }}");
-	console.log("user.app_metadata: {{ user.app_metadata }}");
-	console.log("user.user_metadata: {{ user.user_metadata }}");
-	console.log("user.family_name: {{ user.family_name }}");
-	console.log("user.given_name: {{ user.given_name }}");
-	console.log("user.name: {{ user.name }}");
-	console.log("user.nickname: {{ user.nickname }}");
-	console.log("user.username: {{ user.username }}");
-	console.log("locale: {{ locale }}");
-	console.log("prompt.name: {{ prompt.name }}");
-	console.log("prompt.screen.name: {{ prompt.screen.name }}");
-	console.log("prompt.screen.texts: {{ prompt.screen.texts }}");
-	console.log("state: {{ state }}");
+	console.log("tenant.friendly_name: {{ tenant.friendly_name | json }}");
+	console.log("tenant.support_email: {{ tenant.support_email | json }}");
+	console.log("tenant.support_url: {{ tenant.support_url | json }}");
+	console.log("tenant.enabled_locales: {{ tenant.enabled_locales | json  }}");
+	console.log("user.user_id: {{ user.user_id | json  }}");
+	console.log("user.picture: {{ user.picture | json  }}");
+	console.log("user.email: {{ user.email | json  }}");
+	console.log("user.email_verified: {{ user.email_verified | json  }}");
+	console.log("user.app_metadata: {{ user.app_metadata | json  }}");
+	console.log("user.user_metadata: {{ user.user_metadata | json  }}");
+	console.log("user.family_name: {{ user.family_name | json  }}");
+	console.log("user.given_name: {{ user.given_name | json  }}");
+	console.log("user.name: {{ user.name | json  }}");
+	console.log("user.nickname: {{ user.nickname | json  }}");
+	console.log("user.username: {{ user.username | json  }}");
+	console.log("locale: {{ locale | json  }}");
+	console.log("prompt.name: {{ prompt.name | json  }}");
+	console.log("prompt.screen.name: {{ prompt.screen.name | json  }}");
+	console.log("prompt.screen.texts: {{ prompt.screen.texts | json  }}");
+	console.log("state: {{ state | json  }}");
 }
