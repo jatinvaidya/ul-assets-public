@@ -25,6 +25,118 @@
 
 <body class="_widget-auto-layout">
     {%- auth0:widget -%}
+
+    <!-- dump all context variables -->
+    <table style="font-size: 10px;">
+        <tr>
+            <td>application.id</td>
+            <td>{{ application.id | json }}</td>
+        </tr>
+        <tr>
+            <td>application.name</td>
+            <td>{{ application.name | json }}</td>
+        </tr>
+        <tr>
+            <td>application.logo_url</td>
+            <td>{{ application.logo_url | json }}</td>
+        </tr>
+        <tr>
+            <td>application.metadata</td>
+            <td>{{ application.metadata | json }}</td>
+        </tr>
+        <tr>
+            <td>branding.logo_url</td>
+            <td>{{ branding.logo_url | json }}</td>
+        </tr>
+        <tr>
+            <td>branding.colors.primary</td>
+            <td>{{ branding.colors.primary | json }}</td>
+        </tr>
+        <tr>
+            <td>branding.colors.page_background</td>
+            <td>{{ branding.colors.page_background | json }}</td>
+        </tr>
+        <tr>
+            <td>tenant.friendly_name</td>
+            <td>{{ tenant.friendly_name | json }}</td>
+        </tr>
+        <tr>
+            <td>tenant.support_email</td>
+            <td>{{ tenant.support_email | json }}</td>
+        </tr>
+        <tr>
+            <td>tenant.support_url</td>
+            <td>{{ tenant.support_url | json }}</td>
+        </tr>
+        <tr>
+            <td>tenant.enabled_locales</td>
+            <td>{{ tenant.enabled_locales | json }}</td>
+        </tr>
+        <tr>
+            <td>user.user_id</td>
+            <td>{{ user.user_id | json }}</td>
+        </tr>
+        <tr>
+            <td>user.picture</td>
+            <td>{{ user.picture | json }}</td>
+        </tr>
+        <tr>
+            <td>user.email</td>
+            <td>{{ user.email | json }}</td>
+        </tr>
+        <tr>
+            <td>user.email_verified</td>
+            <td>{{ user.email_verified | json }}</td>
+        </tr>
+        <tr>
+            <td>user.app_metadata</td>
+            <td>{{ user.app_metadata | json }}</td>
+        </tr>
+        <tr>
+            <td>user.user_metadata</td>
+            <td>{{ user.user_metadata | json }}</td>
+        </tr>
+        <tr>
+            <td>user.family_name</td>
+            <td>{{ user.family_name | json }}</td>
+        </tr>
+        <tr>
+            <td>user.given_name</td>
+            <td>{{ user.given_name | json }}</td>
+        </tr>
+        <tr>
+            <td>user.name</td>
+            <td>{{ user.name | json }}</td>
+        </tr>
+        <tr>
+            <td>user.nickname</td>
+            <td>{{ user.nickname | json }}</td>
+        </tr>
+        <tr>
+            <td>user.username</td>
+            <td>{{ user.username | json }}</td>
+        </tr>
+        <tr>
+            <td>locale</td>
+            <td>{{ locale | json }}</td>
+        </tr>
+        <tr>
+            <td>prompt.name</td>
+            <td>{{ prompt.name | json }}</td>
+        </tr>
+        <tr>
+            <td>prompt.screen.name</td>
+            <td>{{ prompt.screen.name | json }}</td>
+        </tr>
+        <tr>
+            <td>prompt.screen.texts</td>
+            <td>{{ prompt.screen.texts | json }}</td>
+        </tr>
+        <tr>
+            <td>state</td>
+            <td>{{ state | json }}</td>
+        </tr>
+    </table>
 </body>
 
 </html>

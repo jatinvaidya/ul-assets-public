@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	console.log("jquery loaded in script");
-	dumpContext();
-	setAppBranding();
+	// dumpContext();
+	// setAppBranding();
 });
 
 function setAppBranding() {
