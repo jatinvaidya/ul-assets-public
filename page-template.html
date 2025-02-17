@@ -14,17 +14,21 @@
     {% endif %}
 
     <!-- brand specific specific javascript code -->
-    {% if application.metadata.js_uri %}
+    {% if application.metadata.script_uri %}
     <script type="text/javascript" src="{{application.metadata.script_uri}}"></script>
     {% endif %}
-
 </head>
 
-<body class="_widget-auto-layout">
+<body class="_widget-auto-layout _use-custom-prompt-logo">
     {%- auth0:widget -%}
-
-    <!-- dump all context variables -->
-    <table style="font-size: 10px;">
+    <footer class="footer">
+        <ul>
+            <li><a id="a_pp" href="https://fitlg.com/privacy">Privacy Policy</a></li>
+            <li><a id="a_tc" href="https://fitlg.com/terms">Terms of Service</a></li>
+        </ul>
+    </footer>
+    <!-- dump all context variables apply bordering to all table cells -->
+    <table>
         <tr>
             <td>application.id</td>
             <td>{{ application.id | json }}</td>

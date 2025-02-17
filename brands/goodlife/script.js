@@ -1,14 +1,21 @@
 $(document).ready(function () {
-  console.log('jquery loaded in rocket mortgage script');
-  setAppBranding();
+	console.log("jquery loaded in script");
+	setBranding();
 });
 
-function setAppBranding() {
-  //set app branding
-  $("body").css('background-image', 'url("https://praveen-static-assets.s3.amazonaws.com/rm-logo.jpeg")');
-  $("body").css("background-repeat", "no-repeat");
-  $("body").css("background-position", "right");
+const setBranding = () => {
+	// set background color for any button to #29c3fa
+	$("button").css("background-color", "#29c3fa");
 
-  //Set logo
-  $('#custom-prompt-logo').css("background-image", "url('https://cdn.auth0.com/blog/auth0rta/theme/logos/auth0-logo-black.png')");
-}
+	// set color for any button to #fff
+	$("button").css("color", "#fff");
+
+	// set color for any link to #29c3fa
+	$("a").css("color", "#29c3fa");
+
+	// set href for a tag with id a_pp to https://www.fitnessfirst.com.au/
+	$("#a_pp").attr("href", "https://www.goodlife.com.au/privacy-policy");
+
+	// set href for a tag with id a_tc to https://www.fitnessfirst.com.au/
+	$("#a_tc").attr("href", "https://www.goodlife.com.au/terms-and-conditions");
+};

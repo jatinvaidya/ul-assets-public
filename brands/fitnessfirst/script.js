@@ -1,17 +1,24 @@
 $(document).ready(function () {
 	console.log("jquery loaded in script");
+	setBranding();
 });
 
-function setAppBranding() {
-	$("body").css(
-		"background-image",
-		'url("https://praveen-static-assets.s3.amazonaws.com/rh-logo.jpeg")'
+const setBranding = () => {
+	// set background color for any button to #db1b33
+	$("button").css("background-color", "#db1b33");
+
+	// set color for any button to #fff
+	$("button").css("color", "#fff");
+
+	// set color for any link to #db1b33
+	$("a").css("color", "#db1b33");
+
+	// set href for a tag with id a_pp to https://www.fitnessfirst.com.au/
+	$("#a_pp").attr("href", "https://www.fitnessfirst.com.sg/privacy-policy");
+
+	// set href for a tag with id a_tc to https://www.fitnessfirst.com.au/
+	$("#a_tc").attr(
+		"href",
+		"https://www.fitnessfirst.com.sg/terms-and-conditions"
 	);
-	$("body").css("background-repeat", "no-repeat");
-	$("body").css("background-position", "right");
-	$("body").css("background-color", "white");
-	$("#custom-prompt-logo").css(
-		"background-image",
-		"url('https://cdn.auth0.com/manhattan/versions/1.3312.0/assets/badge.png')"
-	);
-}
+};
